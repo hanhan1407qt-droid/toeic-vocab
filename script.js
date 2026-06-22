@@ -653,7 +653,7 @@ const wordList = [
     { en: "overview", type: "n", ipa: "/ouvǝ vju:/", vi: "sự khái quát; miêu tả chung, ngắn gọn" },
     { en: "owe", type: "v", ipa: "/ou/", vi: "nợ, hàm ơn" },
     { en: "package", type: "v", ipa: "/pæk.1d3/", vi: "đóng gói, đóng kiện, xếp vào bao bì" },
-    { en: "package_n", type: "n", ipa: "/pæk.1d3/", vi: "gói đồ, bưu kiện; thùng hàng" },
+    { en: "package", type: "n", ipa: "/pæk.1d3/", vi: "gói đồ, bưu kiện; thùng hàng" },
     { en: "parcel", type: "n", ipa: "/'pa:s( )l/", vi: "gói; bưu kiện" },
     { en: "parking", type: "n", ipa: "/'pa:r.kim/", vi: "bãi đỗ xe" },
     { en: "participant", type: "n", ipa: "/pa: tisipǝnt/", vi: "người tham gia, người tham dự" },
