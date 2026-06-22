@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Web Học Từ Vựng TOEIC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="header-area">
+            <h1>TỪ VỰNG TOEIC CỦA HÂN 🚀</h1>
+            <button id="dark-mode-toggle" title="Chuyển chế độ Sáng/Tối">🌙</button>
+        </div>
+        
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Tìm nhanh từ vựng (ví dụ: bill)..." autocomplete="off">
+                <button id="clear-search-btn">&times;</button>
+            </div>
+            <ul id="suggestions-list"></ul>
+        </div>
+
+        <div class="filter-mode-container">
+            <label>Chế độ học:</label>
+            <select id="study-mode-select">
+                <option value="all">Học tất cả từ vựng</option>
+                <option value="favorite">Chỉ học từ đã đánh dấu (⭐)</option>
+            </select>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-text">Tiến độ: <span id="current-progress-num">0</span>/<span id="total-progress-num">0</span> từ</div>
+            <div class="progress-bar-bg">
+                <div id="progress-bar-fill"></div>
+            </div>
+        </div>
+
+        <div class="flashcard" id="card">
+            <div class="card-front">
+                <button id="favorite-btn" class="fav-btn" title="Đánh dấu từ khó">☆</button>
+                
+                <div class="vocab-header">
+                    <h2 id="vocab-en">Loading...</h2>
+                    <button id="speak-btn" title="Nghe phát âm">🔊</button>
+                </div>
+                <p id="vocab-type"></p>
+                <p id="vocab-ipa"></p>
+                <span class="hint">Bấm để xem nghĩa 💡</span>
+            </div>
+            <div class="card-back">
+                <h2 id="vocab-vi">Loading...</h2>
+            </div>
+        </div>
+
+        <div class="control-buttons">
+            <button id="prev-btn" class="btn-secondary">◀ Trước đó</button>
+            <button id="shuffle-btn" class="btn-orange">Trộn ngẫu nhiên 🔄</button>
+            <button id="next-btn" class="btn-primary">Tiếp theo ▶</button>
+        </div>
+
+        <hr class="divider">
+
+        <div class="test-section">
+            <h2>Bài Test 10 Từ Ngẫu Nhiên 📝</h2>
+            <p class="test-desc">Học đi đôi với hành! Thử thách bản thân với 10 câu trắc nghiệm ngẫu nhiên để tăng khả năng phản xạ từ vựng.</p>
+            
+            <button id="start-test-btn" class="btn-test-start">🎯 Bắt đầu làm Test</button>
+
+            <div id="test-content" class="test-content" style="display: none;">
+                <div class="test-progress">Câu hỏi <span id="current-question-num">1</span>/10</div>
+                <div id="question-text" class="question-text">Từ này nghĩa là gì?</div>
+                <div id="options-container" class="options-container">
+                    </div>
+                <button id="next-question-btn" class="btn-next-q" style="display: none;">Câu tiếp theo ➜</button>
+            </div>
+
+            <div id="test-result" class="test-result" style="display: none;">
+                <h3>Kết Quả Bài Test 🎉</h3>
+                <p class="score-text">Bạn đã đúng: <span id="score-count">0</span> / 10 câu!</p>
+                
+                <div class="history-container">
+                    <h4>📈 Lịch sử làm bài gần đây:</h4>
+                    <ul id="test-history-list"></ul>
+                </div>
+                
+                <button id="restart-test-btn" class="btn-test-start" style="margin-top: 15px;">🔄 Làm bài test khác</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
